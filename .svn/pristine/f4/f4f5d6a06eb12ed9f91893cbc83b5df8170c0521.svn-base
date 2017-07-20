@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comps PUBLIC "-//Red Hat, Inc.//DTD Comps info//EN" "comps.dtd">
+<comps>
+  <group>
+    <id>ctxrelease</id>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <display_order>1024</display_order>
+    <name>CTX Release</name>
+    <description>Top-level CTX products</description>
+    <packagelist>
+      <!-- New CTX products should be added here, including patches/service packs -->
+      <packagereq type="optional">eds-5800</packagereq>
+      <packagereq type="optional">eds-5800_Eclipse</packagereq>
+      <packagereq type="optional">eds-5800_CB</packagereq>
+      <packagereq type="optional">eds-9800</packagereq>
+      <packagereq type="optional">eds-9800SC</packagereq>
+      <packagereq type="optional">eds-9800SEIO_MS</packagereq>
+      <packagereq type="optional">eds-9800SEIO_MS_Eclipse</packagereq>
+      <packagereq type="optional">eds-9800SEIO_MS_CB</packagereq>
+      <packagereq type="optional">eds-9800SEIO_HS</packagereq>
+      <packagereq type="optional">eds-9800SEIO_HS_Eclipse</packagereq>
+      <packagereq type="optional">eds-9800SEIO_HS_CB</packagereq>
+      <packagereq type="optional">eds-RAIN</packagereq>
+      <packagereq type="optional">eds-CI</packagereq>
+      <packagereq type="optional">eds-TRI</packagereq>
+      <packagereq type="optional">eds-TRISIM</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>edscommon-devel</id>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <display_order>1024</display_order>
+    <name>EDS common development</name>
+    <description>EDS packages common to all products</description>
+    <packagelist>
+      <!-- devel packages for packages common to both mux and ctx -->
+      <packagereq type="mandatory">ctxconfigs-devel</packagereq>
+      <packagereq type="mandatory">liberror-devel</packagereq>
+      <packagereq type="mandatory">edslog-devel</packagereq>
+      <packagereq type="mandatory">interfaces-devel</packagereq>
+      <packagereq type="mandatory">fake-cuda</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>ctxpackages-devel</id>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <display_order>1024</display_order>
+    <name>CTX Development Packages</name>
+    <description>CTX development files</description>
+    <packagelist>
+      <!-- devel packages for ctx packages -->
+      <packagereq type="mandatory">opalkelly-devel</packagereq>
+      <packagereq type="mandatory">fq-devel</packagereq>
+      <packagereq type="mandatory">galil-devel</packagereq>
+      <packagereq type="mandatory">sds-devel</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>muxpackages-devel</id>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <display_order>1024</display_order>
+    <name>MUX Development Packages</name>
+    <description>MUX development files</description>
+    <packagelist>
+      <!-- devel packages for ctx packages -->
+      <packagereq type="mandatory">mux-libs-devel</packagereq>
+    </packagelist>
+  </group>
+  <category>
+    <id>edssoftware-devel</id>
+    <name>EDS Software Development</name>
+    <description>All EDS software packages for development</description>
+    <display_order>55</display_order>
+    <grouplist>
+      <!-- Any group listed here will show up in yumex under EDS Software group -->
+      <groupid>edsrelease</groupid>
+      <groupid>ctxpackages-devel</groupid>
+      <groupid>edscommon-devel</groupid>
+      <groupid>muxpackages-devel</groupid>
+    </grouplist>
+  </category>
+</comps>

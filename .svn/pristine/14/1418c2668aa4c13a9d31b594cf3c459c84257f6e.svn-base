@@ -1,0 +1,8 @@
+[ISO-Install]
+name=ISO Repo
+baseurl=file:///mnt/iso/
+proxy=_none_
+enabled=1
+gpgcheck=0
+keepcache=0
+
